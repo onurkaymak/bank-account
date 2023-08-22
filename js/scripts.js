@@ -3,10 +3,12 @@ function BankAccounts() {
     this.currentId = 0;
 };
 
+
 BankAccounts.prototype.addAccount = function (account) {
     account.id = this.assignId();
     this.accounts[account.id] = account;
 };
+
 
 
 BankAccounts.prototype.assignId = function () {
@@ -19,14 +21,27 @@ function Account(name, initialDeposit) {
     this.balance = initialDeposit;
 };
 
-Account.prototype.depWith = function (trans, amount) {
+
+BankAccounts.prototype.depWith = function (trans, amount) {
     if (trans === 'deposit') {
         account.balance += amount;
     } else if (trans === 'withdraw') {
         account.balance -= amount;
     }
+    return account.balance;
 }
 
-// const account = new Account("Onur", 5000);
+
 // const bank = new BankAccounts();
-// bank.addAccount(account);
+
+// const account1 = new Account("Onur", 5000);
+// bank.addAccount(account1);
+
+// const account2 = new Account("Paul", 15000);
+// bank.addAccount(account2);
+
+
+// bank.depWith("deposit", 1000, 1);
+// bank.depWith("deposit", 100000, 2);
+// console.log(account2)
+

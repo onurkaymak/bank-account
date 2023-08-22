@@ -53,3 +53,9 @@ bank.addAccount(account);
 account.depWith("deposit", 1000);
 
 Expected Result: {name: 'Onur', balance:6000, id: 1}
+
+Describe findAccount()
+
+Test 6: Will find an Account with provided id
+Code: Account
+Expected Result: { name: 'Onur', balance: 5000, id: 1 }
