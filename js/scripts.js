@@ -16,7 +16,9 @@ BankAccounts.prototype.assignId = function () {
 };
 
 
-BankAccounts.prototype.depWith = function (trans, amount) {
+BankAccounts.prototype.depWith = function (trans, amount, id) {
+    const account = bank.findAccount(id);
+
     if (trans === 'deposit') {
         account.balance += amount;
     } else if (trans === 'withdraw') {
@@ -24,6 +26,7 @@ BankAccounts.prototype.depWith = function (trans, amount) {
     }
     return account.balance;
 }
+
 
 
 BankAccounts.prototype.findAccount = function (id) {
