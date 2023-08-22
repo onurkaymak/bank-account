@@ -42,3 +42,14 @@ Expected Result: {}
 Test 3: Will add parameters into Account constructor
 Code: Account
 Expected Result: { name: name, balance: initialDeposit }
+
+Describe Account.prototype.depWith()
+
+Test 5: Will allow for deposit or withdrawal on account
+Code:
+const account = new Account("Onur", 5000);
+const bank = new BankAccounts();
+bank.addAccount(account);
+account.depWith("deposit", 1000);
+
+Expected Result: {name: 'Onur', balance:6000, id: 1}

@@ -19,10 +19,3 @@ function Account(name, initialDeposit) {
     this.balance = initialDeposit;
 };
 
-
-const account = new Account("Onur", 5000);
-const bank = new BankAccounts();
-
-bank.addAccount(account);
-console.log(account);
-
