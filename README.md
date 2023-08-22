@@ -16,3 +16,7 @@ Describe Account()
 Test 2: Will initialize Account constructor
 Code: Account
 Expected Result: {}
+
+Test 3: Will add parameters into Account constructor
+Code: Account
+Expected Result: { name: name, balance: balance }
