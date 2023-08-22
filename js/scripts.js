@@ -1,3 +1,3 @@
-function BankAccount() {
+function BankAccounts() {
     this.accounts = {};
 }
