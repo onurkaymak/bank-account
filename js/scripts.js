@@ -1,0 +1,3 @@
+function BankAccount() {
+    this.accounts = {};
+}
