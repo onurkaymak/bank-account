@@ -10,15 +10,9 @@ BankAccounts.prototype.addAccount = function (account) {
 };
 
 
-
 BankAccounts.prototype.assignId = function () {
     this.currentId += 1;
     return this.currentId;
-};
-
-function Account(name, initialDeposit) {
-    this.name = name;
-    this.balance = initialDeposit;
 };
 
 
@@ -30,6 +24,21 @@ BankAccounts.prototype.depWith = function (trans, amount) {
     }
     return account.balance;
 }
+
+
+BankAccounts.prototype.findAccount = function (id) {
+    if (this.accounts[id] !== undefined) {
+        return this.accounts[id];
+    }
+    return false;
+};
+
+
+
+function Account(name, initialDeposit) {
+    this.name = name;
+    this.balance = initialDeposit;
+};
 
 
 // const bank = new BankAccounts();
